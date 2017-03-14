@@ -12,8 +12,9 @@ create.addEventListener('click', function(e){
 /* Prev Button */
 prevPage.addEventListener('click',function(e){
 	e.preventDefault();
+
 	// variables 
-	let view=document.querySelector('.view');
+	let view=document.querySelector('#view');
 	let currentPageId=view.dataset['currentPageId'];
 	let prevId=parseInt(currentPageId)-1;
 	let currentPage;
@@ -22,6 +23,7 @@ prevPage.addEventListener('click',function(e){
 	if(currentPageId==0){ // stop if the current page is the main page
 		return alert('fin');
 	}
+
 	// select the current page and translate it
 	currentPage=document.querySelector('#page'+currentPageId);
 	currentPage.style.transform="translate(100%)";
@@ -34,12 +36,13 @@ prevPage.addEventListener('click',function(e){
 		goTo.style.transform="translateX(0)";
 	}
 });
+
 /* Next Button */
 nextPage.addEventListener('click',function(e){
 	e.preventDefault();
 
 	// variables
-	let view=document.querySelector('.view');
+	let view=document.querySelector('#view');
 	let currentPageId=view.dataset['currentPageId'];
 	let nextId=parseInt(currentPageId)+1;
 	let currentPage;
@@ -54,6 +57,7 @@ nextPage.addEventListener('click',function(e){
 	if(currentPageId==0){
 		currentPageId=1;
 	}
+
 	// select the current page end translate it
 	currentPage=document.querySelector('#page'+currentPageId);
 	currentPage.style.transform="translate(-100%)";
@@ -78,11 +82,9 @@ function createPage(){
 	div.style.color="#fff";
 	div.innerHTML="page"+numberOfPage;
 	// tmp
-	createParagraphButton(div);
+	//createParagraphButton(div);
 	// tmp
 	body.appendChild(div);
-
-
 }
 
 /* create a new paragraph */
@@ -106,14 +108,77 @@ function createParagraphButton(elm){
 		elm.appendChild(p)
 	});
 }
+
 /* create dom element */
-function createDomElement(element,height="auto",width="auto"){
+function createDomElement(element,content="new element"){
 	// varibles
 	let newElement=document.createElement(element);
 
-	// set styles
-	newElement.style.height=height;
-	newElement.style.width=width;
-
+	// content
+	newElement.innerHTML=content;
 	return newElement;
 }
+
+/* header */
+let toheader=document.querySelector('#toheader');
+let header=document.querySelector('header');
+let headerIsVisible=false;
+
+toheader.addEventListener('click',e =>{
+	e.preventDefault();
+
+	if(!headerIsVisible){
+		header.style.transform="translateY(0)";
+		headerIsVisible=true;
+	}else{
+		header.style.transform="translateY(-100%)";
+		headerIsVisible=false;
+	}
+})
+
+/* action */
+
+// new link
+let link=document.querySelector('#link');
+link.addEventListener('click', e =>{
+	e.preventDefault();
+
+	// do not create a link on the main page
+	let currentPageId=view.dataset['currentPageId'];
+
+	if(currentPageId==0){
+		return false;
+	}
+	
+	// create the link
+	let newA=createDomElement('a');
+	newA.setAttribute('class','newlink')
+	// select the current page
+	currentPage=document.querySelector('#page'+currentPageId);
+
+	currentPage.appendChild(newA);
+
+})
+
+// new paragraph
+
+let paragraph=document.querySelector('#paragraph');
+paragraph.addEventListener('click', e =>{
+	e.preventDefault();
+
+	// do not create a link on the main page
+	let currentPageId=view.dataset['currentPageId'];
+
+	if(currentPageId==0){
+		return false;
+	}
+
+	// create the paragraph
+	let=p=createDomElement('p');
+	p.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+	// select the current page
+	currentPage=document.querySelector('#page'+currentPageId);
+
+	currentPage.appendChild(p)
+})

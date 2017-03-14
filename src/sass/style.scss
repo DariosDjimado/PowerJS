@@ -11,55 +11,35 @@ html, body{
 }
 
 body{
-    overflow: hidden;
+    overflow: hidden;     
 }
 
 #main{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    
     height: 100%;
     width: 100%;
     
     background-color: rgba(0,0,0,.2);
     
-    & a{
+    #create{
         text-decoration: none;
         margin: 50px;
         display: block;
         padding: 10px;
         background-color: #ffff00;
     }
+   
     
-    .view{
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        top: 50px;
-        left: 0;
-        z-index: 99;
-        
-        & a{
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            width: 100px;
-            height: 50px;
-            text-decoration: none;
-            transition: all .3s;
-            
-            
-        }
-        & #prev-page{
-          background-color: #241c1c;  
-        }
-        & #next-page{
-            background-color: #0000ff;
-        }
-    }
 }
 
 
@@ -78,4 +58,95 @@ body{
     
     transition: all .5s ease-out ;
     background-color: #333333;
+}
+
+header{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #fff;
+    
+    transition: transform 1s ease-out;
+    transform: translateY(-100%);
+    z-index: 99;
+    
+    
+    div{
+        display: flex;
+        justify-content: center;
+        
+        
+        .action{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            
+            height: 30px;
+            width: 50px;
+            margin: 5px;
+            
+            color: #fff;
+            background-color: dimgrey;
+            text-decoration:none;
+        }
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+   
+    bottom: 0;
+    
+    &:hover{
+        background-color: rgba(0,0,0,0.1);
+    }
+    
+    z-index: 100;
+    
+    
+    a{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        width: 100px;
+        height: 50px;
+        text-decoration: none;
+        transition: all .3s;            
+    }
+    #prev-page{
+      background-color: #241c1c;  
+    }
+    #next-page{
+        background-color: #0000ff;
+    }
+    #toheader{
+        position: absolute;
+        right: 5px;
+        text-decoration: none;
+        line-height: 50px;
+        
+        font-weight: 700;
+        color: #fff;
+        background-color: #369;
+         
+         z-index: 100;
+    }
+}
+
+.newlink{
+    display: block;
+    color:#000;
+    background-color: cornsilk;
+    width: 100px;
+    height: 100px;
 }

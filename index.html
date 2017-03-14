@@ -6,14 +6,24 @@
 	<link rel="stylesheet" type="text/css" href="src/stylesheets/style.css">
 </head>
 <body>
+	<header>
+			
+		<div>
+			<a class="action" id="link" href="#">&lt;/a&gt;</a>
+			<a class="action" id="paragraph" href="#">&lt;/p&gt;</a>
+        	
+		</div>
+	</header>
 	<div id="main">
 		<a id="create" href="#">create a new page</a>
 		
-		<div class="view" data-current-page-id="0">
-			<a id="prev-page" href="#">Prev</a>
-			<a id="next-page" href="#">Next</a>	
-		</div>
+		
 	</div>
+	<footer id="view" data-current-page-id="0">
+		<a id="prev-page" href="#">Prev</a>
+		<a id="next-page" href="#">Next</a>	
+		<a id="toheader" href="#">^</a>
+	</footer>
 	<script type="text/javascript" src="src/app.js"></script>
 
 </body>

@@ -18,6 +18,11 @@ body {
 
 /* line 17, ../sass/style.scss */
 #main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -26,45 +31,16 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 27, ../sass/style.scss */
-#main a {
+/* line 34, ../sass/style.scss */
+#main #create {
   text-decoration: none;
   margin: 50px;
   display: block;
   padding: 10px;
   background-color: #ffff00;
 }
-/* line 35, ../sass/style.scss */
-#main .view {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  top: 50px;
-  left: 0;
-  z-index: 99;
-}
-/* line 44, ../sass/style.scss */
-#main .view a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  width: 100px;
-  height: 50px;
-  text-decoration: none;
-  transition: all .3s;
-}
-/* line 56, ../sass/style.scss */
-#main .view #prev-page {
-  background-color: #241c1c;
-}
-/* line 59, ../sass/style.scss */
-#main .view #next-page {
-  background-color: #0000ff;
-}
 
-/* line 67, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 .page {
   position: absolute;
   display: flex;
@@ -78,4 +54,89 @@ body {
   height: 100%;
   transition: all 0.5s ease-out;
   background-color: #333333;
+}
+
+/* line 63, ../sass/style.scss */
+header {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  transition: transform 1s ease-out;
+  transform: translateY(-100%);
+  z-index: 99;
+}
+/* line 80, ../sass/style.scss */
+header div {
+  display: flex;
+  justify-content: center;
+}
+/* line 85, ../sass/style.scss */
+header div .action {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 50px;
+  margin: 5px;
+  color: #fff;
+  background-color: dimgrey;
+  text-decoration: none;
+}
+
+/* line 101, ../sass/style.scss */
+footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+}
+/* line 109, ../sass/style.scss */
+footer:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* line 116, ../sass/style.scss */
+footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 100px;
+  height: 50px;
+  text-decoration: none;
+  transition: all .3s;
+}
+/* line 126, ../sass/style.scss */
+footer #prev-page {
+  background-color: #241c1c;
+}
+/* line 129, ../sass/style.scss */
+footer #next-page {
+  background-color: #0000ff;
+}
+/* line 132, ../sass/style.scss */
+footer #toheader {
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
+  line-height: 50px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #369;
+  z-index: 100;
+}
+
+/* line 146, ../sass/style.scss */
+.newlink {
+  display: block;
+  color: #000;
+  background-color: cornsilk;
+  width: 100px;
+  height: 100px;
 }

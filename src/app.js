@@ -17,24 +17,9 @@ prevPage.addEventListener('click',function(e){
 	let view=document.querySelector('#view');
 	let currentPageId=view.dataset['currentPageId'];
 	let prevId=parseInt(currentPageId)-1;
-	let currentPage;
-	let goTo;
-
-	if(currentPageId==0){ // stop if the current page is the main page
-		return alert('fin');
-	}
-
-	// select the current page and translate it
-	currentPage=document.querySelector('#page'+currentPageId);
-	currentPage.style.transform="translate(100%)";
-
-	// set currentPageId to the viex at prevId
-	view.setAttribute('data-current-page-id',String(prevId));
-
-	if(prevId>0){ // do not move the main page
-		goTo=document.querySelector('#page'+prevId);
-		goTo.style.transform="translateX(0)";
-	}
+	
+	// go on the page
+	goToPage(prevId);
 });
 
 /* Next Button */
@@ -45,30 +30,52 @@ nextPage.addEventListener('click',function(e){
 	let view=document.querySelector('#view');
 	let currentPageId=view.dataset['currentPageId'];
 	let nextId=parseInt(currentPageId)+1;
-	let currentPage;
+
+	// go on the page
+	goToPage(nextId);
+});
+
+/* go to a specific page */
+function goToPage(pageId){
+	// variables
+	let view=document.querySelector('#view');
+	let currentPageId=view.dataset['currentPageId'];
 	let goTo;
 
-	// do not translate the last page
-	if(nextId>numberOfPage){
+	// stop on the last page or on the main page
+	if(pageId>numberOfPage || pageId==-1){
 		return alert('fin');
 	}
 
-	// if the current page is the main then set current page Id to 1
-	if(currentPageId==0){
-		currentPageId=1;
+	// do not translate the main page
+	
+
+		if(currentPageId<pageId){
+			// select all the pages before translate them at left
+			for(let pageBeforeId=1; pageBeforeId<pageId; pageBeforeId++){
+				let pageBefore=document.querySelector('#page'+pageBeforeId);
+				pageBefore.style.transform="translate(-100%)";
+			}
+		} else {
+			// select all the pages after translate them at right
+			for(let pageAfterId=currentPageId; pageAfterId>pageId; pageAfterId--){
+				let pageAfter=document.querySelector('#page'+pageAfterId);
+				pageAfter.style.transform="translate(100%)";
+			}
+		}
+	
+
+	// select the goto page and translate it
+	if(pageId!=0){
+		goTo=document.querySelector('#page'+pageId);
+		goTo.style.transform="translateX(0)";
 	}
-
-	// select the current page end translate it
-	currentPage=document.querySelector('#page'+currentPageId);
-	currentPage.style.transform="translate(-100%)";
-
-	// select the next page and translate it
-	goTo=document.querySelector('#page'+nextId);
-	goTo.style.transform="translateX(0)";
+	
+	
 
 	// set view attribute 
-	view.setAttribute('data-current-page-id',String(nextId));
-});
+	view.setAttribute('data-current-page-id',String(pageId));
+}
 
 /* create a new page */
 function createPage(){
@@ -79,12 +86,14 @@ function createPage(){
 	div.setAttribute('class','page');
 	div.setAttribute('id', 'page'+numberOfPage);
 	div.style.transform="translateX(100%)";
-	div.style.color="#fff";
 	div.innerHTML="page"+numberOfPage;
 	// tmp
 	//createParagraphButton(div);
 	// tmp
 	body.appendChild(div);
+
+	// go on the new page
+	goToPage(numberOfPage);
 }
 
 /* create a new paragraph */
@@ -134,7 +143,7 @@ toheader.addEventListener('click',e =>{
 		header.style.transform="translateY(-100%)";
 		headerIsVisible=false;
 	}
-})
+});
 
 /* action */
 
@@ -144,6 +153,7 @@ link.addEventListener('click', e =>{
 	e.preventDefault();
 
 	// do not create a link on the main page
+    let view=document.querySelector('#view');
 	let currentPageId=view.dataset['currentPageId'];
 
 	if(currentPageId==0){
@@ -152,13 +162,13 @@ link.addEventListener('click', e =>{
 	
 	// create the link
 	let newA=createDomElement('a');
-	newA.setAttribute('class','newlink')
+	newA.setAttribute('class','newlink');
 	// select the current page
-	currentPage=document.querySelector('#page'+currentPageId);
+	let currentPage=document.querySelector('#page'+currentPageId);
 
 	currentPage.appendChild(newA);
 
-})
+});
 
 // new paragraph
 
@@ -167,6 +177,7 @@ paragraph.addEventListener('click', e =>{
 	e.preventDefault();
 
 	// do not create a link on the main page
+    let view=document.querySelector('#view');
 	let currentPageId=view.dataset['currentPageId'];
 
 	if(currentPageId==0){
@@ -174,11 +185,11 @@ paragraph.addEventListener('click', e =>{
 	}
 
 	// create the paragraph
-	let=p=createDomElement('p');
+	let p=createDomElement('p');
 	p.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 	// select the current page
-	currentPage=document.querySelector('#page'+currentPageId);
+	let currentPage=document.querySelector('#page'+currentPageId);
 
 	currentPage.appendChild(p)
-})
+});

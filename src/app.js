@@ -193,3 +193,35 @@ paragraph.addEventListener('click', e =>{
 
 	currentPage.appendChild(p)
 });
+
+
+// new zone
+let zone=document.querySelector('#zone');
+zone.addEventListener('click', e =>{
+	e.preventDefault();
+
+	// do not create a zone on the main page
+    let view=document.querySelector('#view');
+	let currentPageId=view.dataset['currentPageId'];
+
+	if(currentPageId==0){
+		return false;
+	}
+
+	// select the current page
+	let currentPage=document.querySelector('#page'+currentPageId);
+
+	currentPage.appendChild(createZone())
+});
+
+// function create zone
+function createZone(height="100px",width="300px"){
+	let div=createDomElement('div');
+
+	div.style.height=height;
+	div.style.width=width;
+	div.style.backgroundColor='#000';
+	div.style.margin="10px";
+
+	return div;
+}

@@ -1,0 +1,31 @@
+/* line 1, ../sass/header.scss */
+header {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: transform .3s ease-in-out;
+  transform: translateY(-100%);
+  z-index: 99;
+}
+/* line 18, ../sass/header.scss */
+header div {
+  display: flex;
+  justify-content: center;
+}
+/* line 23, ../sass/header.scss */
+header div .action {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 50px;
+  margin: 5px;
+  color: #fff;
+  background-color: dimgrey;
+  text-decoration: none;
+}

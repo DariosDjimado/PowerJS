@@ -8,35 +8,60 @@ nav {
   z-index: 999;
   background-color: #333333;
   overflow: hidden;
+  transition: transform .3s;
 }
-/* line 13, ../sass/nav.scss */
+/* line 14, ../sass/nav.scss */
 nav:hover {
   overflow-y: scroll;
 }
-/* line 18, ../sass/nav.scss */
+/* line 20, ../sass/nav.scss */
+nav .toggle a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+}
+/* line 30, ../sass/nav.scss */
+nav .menu h3 {
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+/* line 35, ../sass/nav.scss */
+nav .menu a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}
+/* line 48, ../sass/nav.scss */
 nav .zone1 .create {
   background-color: #5fbcd3;
 }
-/* line 23, ../sass/nav.scss */
+/* line 54, ../sass/nav.scss */
 nav .zone2 .create {
   background-color: #c87137;
 }
-/* line 29, ../sass/nav.scss */
+/* line 60, ../sass/nav.scss */
 nav .zone3 .create {
   color: #000;
   background-color: #ffd42a;
 }
-/* line 35, ../sass/nav.scss */
+/* line 66, ../sass/nav.scss */
 nav .zone4 .create {
   color: #000;
   background-color: #87de87;
 }
-/* line 41, ../sass/nav.scss */
+/* line 72, ../sass/nav.scss */
 nav .zone5 .create {
   color: #000;
   background-color: #c8b7be;
 }
-/* line 46, ../sass/nav.scss */
+/* line 77, ../sass/nav.scss */
 nav div {
   display: inline-flex;
   justify-content: flex-end;
@@ -45,14 +70,14 @@ nav div {
   padding: 5px 5px 0 0;
   width: 100%;
 }
-/* line 56, ../sass/nav.scss */
+/* line 88, ../sass/nav.scss */
 nav div span {
   display: block;
   width: 100%;
   color: #fff;
   padding-left: 20px;
 }
-/* line 62, ../sass/nav.scss */
+/* line 94, ../sass/nav.scss */
 nav div .create {
   display: inline-flex;
   justify-content: center;

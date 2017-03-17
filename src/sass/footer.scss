@@ -10,10 +10,6 @@ footer{
     bottom: 0;
     z-index: 100;
     
-    &:hover{
-        background-color: rgba(0,0,0,0.1);
-    }
-    
     #next-page, #prev-page{
         display: inline-flex;
         align-items: center;
@@ -21,14 +17,13 @@ footer{
         color: #fff;
         width: 100px;
         height: 20px;
+        margin: 0 5px;
         text-decoration: none;
-        transition: all .3s;            
-    }
-    #prev-page{
-      background-color: #241c1c;  
-    }
-    #next-page{
-        background-color: #008000;
+        transition: all .3s; 
+        
+        &:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
     }
     #toheader{
         position: absolute;

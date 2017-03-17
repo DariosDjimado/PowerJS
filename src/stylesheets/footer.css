@@ -11,10 +11,6 @@ footer {
   z-index: 100;
 }
 /* line 13, ../sass/footer.scss */
-footer:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-/* line 17, ../sass/footer.scss */
 footer #next-page, footer #prev-page {
   display: inline-flex;
   align-items: center;
@@ -22,18 +18,15 @@ footer #next-page, footer #prev-page {
   color: #fff;
   width: 100px;
   height: 20px;
+  margin: 0 5px;
   text-decoration: none;
   transition: all .3s;
 }
-/* line 27, ../sass/footer.scss */
-footer #prev-page {
-  background-color: #241c1c;
+/* line 24, ../sass/footer.scss */
+footer #next-page:hover, footer #prev-page:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 30, ../sass/footer.scss */
-footer #next-page {
-  background-color: #008000;
-}
-/* line 33, ../sass/footer.scss */
+/* line 28, ../sass/footer.scss */
 footer #toheader {
   position: absolute;
   right: 10px;

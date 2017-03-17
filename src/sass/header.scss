@@ -1,6 +1,6 @@
 header{
     position: relative;
-    height: 50%;
+    height: 100%;
     width: 100%;
     
     display: flex;
@@ -20,18 +20,6 @@ header{
         justify-content: center;
         
         
-        .action{
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            
-            height: 30px;
-            width: 50px;
-            margin: 5px;
-            
-            color: #fff;
-            background-color: dimgrey;
-            text-decoration:none;
-        }
+        
     }
 }

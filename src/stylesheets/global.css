@@ -1,0 +1,21 @@
+/* line 1, ../sass/global.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 6, ../sass/global.scss */
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 13, ../sass/global.scss */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  overflow: hidden;
+}

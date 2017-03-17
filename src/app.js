@@ -91,7 +91,7 @@ function createPage(){
 	//createParagraphButton(div);
 	// tmp
 	body.appendChild(div);
-
+	draggerInit('.'+div.getAttribute('class'));
 	// go on the new page
 	goToPage(numberOfPage);
 }
@@ -147,7 +147,7 @@ toheader.addEventListener('click',e =>{
 
 /* action */
 
-// new link
+/*/ new link
 let link=document.querySelector('#link');
 link.addEventListener('click', e =>{
 	e.preventDefault();
@@ -168,10 +168,10 @@ link.addEventListener('click', e =>{
 
 	currentPage.appendChild(newA);
 
-});
+});*/
 
 // new paragraph
-
+/*
 let paragraph=document.querySelector('#paragraph');
 paragraph.addEventListener('click', e =>{
 	e.preventDefault();
@@ -212,7 +212,7 @@ zone.addEventListener('click', e =>{
 	let currentPage=document.querySelector('#page'+currentPageId);
 
 	currentPage.appendChild(createZone())
-});
+});*/
 
 // function create zone
 function createZone(height="100px",width="300px"){
@@ -225,3 +225,11 @@ function createZone(height="100px",width="300px"){
 
 	return div;
 }
+
+// move 
+
+/*
+let drag=document.querySelector('#drag');
+drag.addEventListener('dragstart', e =>{
+	console.log(e);
+});*/

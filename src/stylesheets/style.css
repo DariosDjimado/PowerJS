@@ -1,22 +1,4 @@
-/* line 1, ../sass/style.scss */
-* {
-  box-sizing: border-box;
-}
-
-/* line 6, ../sass/style.scss */
-html, body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-}
-
-/* line 13, ../sass/style.scss */
-body {
-  overflow: hidden;
-}
-
-/* line 17, ../sass/style.scss */
+/* line 2, ../sass/style.scss */
 #main {
   position: absolute;
   top: 0;
@@ -29,9 +11,9 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #666666;
 }
-/* line 34, ../sass/style.scss */
+/* line 19, ../sass/style.scss */
 #main #create {
   text-decoration: none;
   margin: 50px;
@@ -40,7 +22,7 @@ body {
   background-color: #ffff00;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 .page {
   position: absolute;
   display: flex;
@@ -58,7 +40,7 @@ body {
   overflow-y: scroll;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 .newlink {
   display: block;
   color: #000;

@@ -1,0 +1,66 @@
+/* line 2, ../sass/nav.scss */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  z-index: 999;
+  background-color: #333333;
+  overflow: hidden;
+}
+/* line 13, ../sass/nav.scss */
+nav:hover {
+  overflow-y: scroll;
+}
+/* line 18, ../sass/nav.scss */
+nav .zone1 .create {
+  background-color: #5fbcd3;
+}
+/* line 23, ../sass/nav.scss */
+nav .zone2 .create {
+  background-color: #c87137;
+}
+/* line 29, ../sass/nav.scss */
+nav .zone3 .create {
+  color: #000;
+  background-color: #ffd42a;
+}
+/* line 35, ../sass/nav.scss */
+nav .zone4 .create {
+  color: #000;
+  background-color: #87de87;
+}
+/* line 41, ../sass/nav.scss */
+nav .zone5 .create {
+  color: #000;
+  background-color: #c8b7be;
+}
+/* line 46, ../sass/nav.scss */
+nav div {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 5px 5px 0 0;
+  width: 100%;
+}
+/* line 56, ../sass/nav.scss */
+nav div span {
+  display: block;
+  width: 100%;
+  color: #fff;
+  padding-left: 20px;
+}
+/* line 62, ../sass/nav.scss */
+nav div .create {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  min-width: 40px;
+  padding: 2px;
+  margin: 10px;
+  text-decoration: none;
+  color: #fff;
+}

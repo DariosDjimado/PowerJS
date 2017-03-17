@@ -1,0 +1,79 @@
+$nav_bg_color: #333333;
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    
+    z-index: 999;
+    background-color: $nav_bg_color;
+    overflow:hidden;
+    
+    &:hover{
+        overflow-y: scroll;
+    }
+    
+    .zone1{          
+        .create{
+            background-color: #5fbcd3;
+        }
+    }
+    .zone2{          
+        .create{
+            
+            background-color: #c87137;
+        }
+    }
+    .zone3{          
+        .create{
+            color: #000;
+            background-color: #ffd42a;
+        }
+    }
+    .zone4{          
+        .create{
+            color: #000;
+            background-color: #87de87;
+        }
+    }
+    .zone5{          
+        .create{
+            color: #000;
+            background-color: #c8b7be;
+        }
+    }
+    div{
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-flow: row wrap;
+        padding: 5px 5px 0 0;
+        
+        width: 100%;
+        //height: 10px;
+        
+        span{
+            display: block;
+            width: 100%;
+            color: #fff;
+            padding-left: 20px;
+        }
+        .create{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            min-width: 40px;
+            padding: 2px;
+            
+            
+            
+            margin: 10px;
+            
+            text-decoration: none;
+            color: #fff;
+            
+        }
+    }
+}

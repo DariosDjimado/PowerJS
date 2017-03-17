@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>PowerStudent</title>
+	<link rel="stylesheet" type="text/css" href="src/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="src/stylesheets/style.css">
 	<link rel="stylesheet" type="text/css" href="src/stylesheets/header.css">
 	<link rel="stylesheet" type="text/css" href="src/stylesheets/footer.css">
@@ -10,15 +11,16 @@
 	<link rel="stylesheet" type="text/css" href="src/stylesheets/global.css">
 </head>
 <body >
-	<header>
-		<div>
-			
-        	
-		</div>
-	</header>
 	<nav>
+
 		<div class="menu">
+			<div class="toggle">
+				<a href="#" id="toggle-nav"><i class="fa fa-angle-double-left"  aria-hidden="true"></i></a>
+			</div>
 			<h3>Accueil</h3>
+			<a id="new_page" href="#">
+				<i class="fa fa-plus-square"  aria-hidden="true"></i>
+			</a>
 		</div>
 		<div class="zone1">
 			<span>Titres</span>
@@ -100,14 +102,19 @@
 		</div>
 	</nav>
 	<main id="main">
-		<a id="create" href="#">create a new page</a>
+
+		<div class="project_name">PowerJs</div>
 	</main>
 
 
 	<footer id="view" data-current-page-id="0">
-		<a id="prev-page" href="#">Prev</a>
-		<a id="next-page" href="#">Next</a>	
-		<a id="toheader" href="#">^</a>
+				
+		<a id="prev-page" href="#">
+			<i class="fa fa-chevron-left"  aria-hidden="true"></i>
+		</a>
+		<a id="next-page" href="#">
+			<i class="fa fa-chevron-right"  aria-hidden="true"></i>
+		</a>	
 	</footer>
 	<script type="text/javascript" src="src/app.js"></script>
 	<script type="text/javascript" src="src/create.js"></script>

@@ -1,4 +1,4 @@
-let create=document.querySelector('#create');
+let create=document.querySelector('#new_page');
 let nextPage=document.querySelector('#next-page');
 let prevPage=document.querySelector('#prev-page');
 let numberOfPage=0;
@@ -25,6 +25,8 @@ prevPage.addEventListener('click',function(e){
 /* Next Button */
 nextPage.addEventListener('click',function(e){
 	e.preventDefault();
+
+	console.log(e.target);
 
 	// variables
 	let view=document.querySelector('#view');
@@ -90,8 +92,10 @@ function createPage(){
 	// tmp
 	//createParagraphButton(div);
 	// tmp
+	console.log('#'+'page'+numberOfPage);
+	
 	body.appendChild(div);
-	draggerInit('.'+div.getAttribute('class'));
+	draggerInit('#page'+numberOfPage);
 	// go on the new page
 	goToPage(numberOfPage);
 }
@@ -129,19 +133,23 @@ function createDomElement(element,content="new element"){
 }
 
 /* header */
-let toheader=document.querySelector('#toheader');
-let header=document.querySelector('header');
-let headerIsVisible=false;
+let toggleNav=document.querySelector('#toggle-nav');
+let nav=document.querySelector('nav');
+let navIsVisible=true;
 
-toheader.addEventListener('click',e =>{
+toggleNav.addEventListener('click',e =>{
 	e.preventDefault();
 
-	if(!headerIsVisible){
-		header.style.transform="translateY(0)";
-		headerIsVisible=true;
+	if(!navIsVisible){
+		nav.style.transform="translateX(0)";
+		navIsVisible=true;
+		toggleNav.firstChild.classList.add('fa-angle-double-left');
+		toggleNav.firstChild.classList.remove('fa-angle-double-right');
 	}else{
-		header.style.transform="translateY(-100%)";
-		headerIsVisible=false;
+		nav.style.transform="translateX(-90%)";
+		navIsVisible=false;
+		toggleNav.firstChild.classList.remove('fa-angle-double-left');
+		toggleNav.firstChild.classList.add('fa-angle-double-right');
 	}
 });
 

@@ -62,3 +62,28 @@
     width: 100px;
     height: 100px;
 }
+
+body{
+    section{
+        display: none;
+        z-index: 1000;
+        background-color: #fff;
+        border: solid 1px #000;
+        width: auto;
+        height: auto;
+        //padding: 5px;
+        div{
+            display: flex;
+            justify-content:flex-end;
+            align-items: center;
+            
+            padding: 5px;
+            
+            flex-flow: row wrap;
+            input{
+                margin: 5px;
+                width: 50px;
+            }
+        }
+    }
+}

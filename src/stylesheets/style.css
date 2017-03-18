@@ -59,3 +59,26 @@
   width: 100px;
   height: 100px;
 }
+
+/* line 67, ../sass/style.scss */
+body section {
+  display: none;
+  z-index: 1000;
+  background-color: #fff;
+  border: solid 1px #000;
+  width: auto;
+  height: auto;
+}
+/* line 75, ../sass/style.scss */
+body section div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+  flex-flow: row wrap;
+}
+/* line 83, ../sass/style.scss */
+body section div input {
+  margin: 5px;
+  width: 50px;
+}

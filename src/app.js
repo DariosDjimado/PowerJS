@@ -91,8 +91,6 @@ function createPage(){
 	div.innerHTML="page"+numberOfPage;
 	// tmp
 	//createParagraphButton(div);
-	// tmp
-	console.log('#'+'page'+numberOfPage);
 	
 	body.appendChild(div);
 	draggerInit('#page'+numberOfPage);

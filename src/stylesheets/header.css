@@ -1,5 +1,5 @@
 /* line 1, ../sass/header.scss */
-header {
+.power_header {
   position: relative;
   height: 100%;
   width: 100%;
@@ -13,7 +13,7 @@ header {
   z-index: 99;
 }
 /* line 18, ../sass/header.scss */
-header div {
+.power_header div {
   display: flex;
   justify-content: center;
 }

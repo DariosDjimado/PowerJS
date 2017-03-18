@@ -1,5 +1,5 @@
 /* line 1, ../sass/footer.scss */
-footer {
+.power_footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@ footer {
   z-index: 100;
 }
 /* line 13, ../sass/footer.scss */
-footer #next-page, footer #prev-page {
+.power_footer #next-page, .power_footer #prev-page {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -23,11 +23,11 @@ footer #next-page, footer #prev-page {
   transition: all .3s;
 }
 /* line 24, ../sass/footer.scss */
-footer #next-page:hover, footer #prev-page:hover {
+.power_footer #next-page:hover, .power_footer #prev-page:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 /* line 28, ../sass/footer.scss */
-footer #toheader {
+.power_footer #toheader {
   position: absolute;
   right: 10px;
   top: 50%;

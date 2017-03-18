@@ -1,5 +1,5 @@
 /* line 2, ../sass/nav.scss */
-nav {
+.power_nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,11 +11,11 @@ nav {
   transition: transform .3s;
 }
 /* line 14, ../sass/nav.scss */
-nav:hover {
+.power_nav:hover {
   overflow-y: scroll;
 }
 /* line 20, ../sass/nav.scss */
-nav .toggle a {
+.power_nav .toggle a {
   position: absolute;
   right: 0;
   top: 0;
@@ -23,13 +23,13 @@ nav .toggle a {
   height: 20px;
 }
 /* line 30, ../sass/nav.scss */
-nav .menu h3 {
+.power_nav .menu h3 {
   display: block;
   width: 100%;
   color: #fff;
 }
 /* line 35, ../sass/nav.scss */
-nav .menu a {
+.power_nav .menu a {
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -39,30 +39,30 @@ nav .menu a {
   background-color: #fff;
 }
 /* line 48, ../sass/nav.scss */
-nav .zone1 .create {
+.power_nav .zone1 .create {
   background-color: #5fbcd3;
 }
 /* line 54, ../sass/nav.scss */
-nav .zone2 .create {
+.power_nav .zone2 .create {
   background-color: #c87137;
 }
 /* line 60, ../sass/nav.scss */
-nav .zone3 .create {
+.power_nav .zone3 .create {
   color: #000;
   background-color: #ffd42a;
 }
 /* line 66, ../sass/nav.scss */
-nav .zone4 .create {
+.power_nav .zone4 .create {
   color: #000;
   background-color: #87de87;
 }
 /* line 72, ../sass/nav.scss */
-nav .zone5 .create {
+.power_nav .zone5 .create {
   color: #000;
   background-color: #c8b7be;
 }
 /* line 77, ../sass/nav.scss */
-nav div {
+.power_nav div {
   display: inline-flex;
   justify-content: flex-end;
   align-items: center;
@@ -71,14 +71,14 @@ nav div {
   width: 100%;
 }
 /* line 88, ../sass/nav.scss */
-nav div span {
+.power_nav div span {
   display: block;
   width: 100%;
   color: #fff;
   padding-left: 20px;
 }
 /* line 94, ../sass/nav.scss */
-nav div .create {
+.power_nav div .create {
   display: inline-flex;
   justify-content: center;
   align-items: center;

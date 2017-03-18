@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="src/stylesheets/global.css">
 </head>
 <body >
-	<nav>
+	<nav class="power_nav">
 
 		<div class="menu">
 			<div class="toggle">
@@ -102,12 +102,31 @@
 		</div>
 	</nav>
 	<main id="main">
-
 		<div class="project_name">PowerJs</div>
 	</main>
+	<section id="edit-section">
+		<div class="size">
+			Height: <input type="number" name="height" value="">
+			width: <input type="number" name="width" value="">
+			top: <input type="number" name="top" value="">
+			right: <input type="number" name="right" value="">
+			bottom: <input type="number" name="bottom" value="">
+			left: <input type="number" name="left" value="">
+		</div>
+		<div class="picture">
+			opacity: <input type="number" name="opacity" value="">
+			color: <input type="color" name="color">
+			background color: <input type="color" name="background-color">
 
+		</div>
+		<div>
+			<input id="edit_section_submit" type="button" value="Ok" name="button">
+			<input id="edit_section_cancel" type="button" value="cancel" name="button">
+		</div>
+		
+	</section>
 
-	<footer id="view" data-current-page-id="0">
+	<footer id="view" class="power_footer" data-current-page-id="0">
 				
 		<a id="prev-page" href="#">
 			<i class="fa fa-chevron-left"  aria-hidden="true"></i>

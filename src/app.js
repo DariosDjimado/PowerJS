@@ -1,10 +1,10 @@
-let create=document.querySelector('#new_page');
+let newPage=document.querySelector('#new_page');
 let nextPage=document.querySelector('#next-page');
 let prevPage=document.querySelector('#prev-page');
 let numberOfPage=0;
 
 
-create.addEventListener('click', function(e){
+newPage.addEventListener('click', function(e){
 	e.preventDefault();
 	createPage();
 });

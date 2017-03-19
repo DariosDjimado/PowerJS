@@ -1,4 +1,7 @@
 let creates=document.querySelectorAll('.create');
+let editSection=document.querySelector('#edit-section');
+let editSectionSubmit=document.querySelector('#edit_section_submit');
+let editInput=document.querySelectorAll('.edit-input');
 
 creates.forEach(create =>{
 	create.addEventListener('click',e =>{
@@ -69,9 +72,17 @@ creates.forEach(create =>{
 		})
 })
 
-let editSection=document.querySelector('#edit-section');
-let editSectionCancel=document.querySelector('#edit_section_cancel');
-editSectionCancel.addEventListener('click',e =>{
+editInput.forEach(input =>{
+	input.addEventListener('change',e =>{
+		let element=document.querySelector('#'+editSection.getAttribute('ref-id'));
+		if(e.target.classList.contains('pixel')){
+			element.style[e.target.getAttribute('name')]=e.target.value+'px';
+		}
+		element.style[e.target.getAttribute('name')]=e.target.value;
+	})
+})
+
+editSectionSubmit.addEventListener('click',e =>{
 	editSection.style.display="none";
 })
 
@@ -99,9 +110,11 @@ function globalEdit(element,elementId){
 }
 
 
+
+
 /* source http://wowmotty.blogspot.fr/2009/06/convert-jquery-rgb-output-to-hex-color.html */
 
-var hexDigits = new Array
+let hexDigits = new Array
         ("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f");
 //Function to convert rgb color to hex format
 function rgb2hex(rgb) {

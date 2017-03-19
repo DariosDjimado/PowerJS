@@ -81,6 +81,11 @@ function draggerInit(mainDivId){
 
 	   setVisible(element);
 
+	   if(editSection.style.display!="none"){
+	   		globalEdit(element, element.getAttribute('id'));
+	   }
+	   
+
 	}, false);
 
 }

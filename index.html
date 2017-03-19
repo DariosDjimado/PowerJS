@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="src/stylesheets/global.css">
 </head>
 <body >
-	<nav class="power_nav">
+	<nav id="power_nav" class="power_nav">
 
 		<div class="menu">
 			<div class="toggle">
@@ -104,24 +104,31 @@
 	<main id="main">
 		<div class="project_name">PowerJs</div>
 	</main>
-	<section id="edit-section">
+	<section id="edit-section" style="display: none;">
 		<div class="size">
-			Height: <input type="number" name="height" value="">
-			width: <input type="number" name="width" value="">
-			top: <input type="number" name="top" value="">
-			right: <input type="number" name="right" value="">
-			bottom: <input type="number" name="bottom" value="">
-			left: <input type="number" name="left" value="">
+			Height: <input class="edit-input pixel" type="number" name="height" value="">
+			width: <input class="edit-input pixel" type="number" name="width" value="">
+			top: <input class="edit-input pixel" type="number" name="top" value="">
+			right: <input class="edit-input pixel" type="number" name="right" value="">
+			bottom: <input class="edit-input pixel" type="number" name="bottom" value="">
+			left: <input class="edit-input pixel" type="number" name="left" value="">
+		</div>
+		<div class="font">
+			font-weight: <input class="edit-input" type="number" name="font-weight">
+			font-size: <input class="edit-input pixel" type="number" name="font-size">
+			line-height: <input class="edit-input pixel" type="number" name="line-height">
+			color: <input class="edit-input" type="color" name="color">
+		</div>
+		<div class="border">
+			border: <input class="edit-input" type="n" name="">
 		</div>
 		<div class="picture">
-			opacity: <input type="number" name="opacity" value="">
-			color: <input type="color" name="color">
-			background color: <input type="color" name="background-color">
+			opacity: <input class="edit-input" type="number" name="opacity" value="">
+			background color: <input class="edit-input" type="color" name="background-color">
 
 		</div>
 		<div>
 			<input id="edit_section_submit" type="button" value="Ok" name="button">
-			<input id="edit_section_cancel" type="button" value="cancel" name="button">
 		</div>
 		
 	</section>
@@ -138,6 +145,5 @@
 	<script type="text/javascript" src="src/app.js"></script>
 	<script type="text/javascript" src="src/create.js"></script>
 	<script type="text/javascript" src="src/dragger/app.js"></script>
-
 </body>
 </html>

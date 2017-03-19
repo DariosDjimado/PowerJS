@@ -8,7 +8,7 @@ $nav_bg_color: #333333;
     
     z-index: 999;
     background-color: $nav_bg_color;
-    overflow:hidden;
+    overflow:scroll;
     transition: transform .3s;
     
     &:hover{

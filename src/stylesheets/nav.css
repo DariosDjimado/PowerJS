@@ -7,7 +7,7 @@
   height: 100%;
   z-index: 999;
   background-color: #333333;
-  overflow: hidden;
+  overflow: scroll;
   transition: transform .3s;
 }
 /* line 14, ../sass/nav.scss */

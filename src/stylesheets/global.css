@@ -16,9 +16,11 @@
 /* line 13, ../sass/global.scss */
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-/* line 18, ../sass/global.scss */
+/* line 20, ../sass/global.scss */
 html, body {
   padding: 0;
   margin: 0;
@@ -26,7 +28,7 @@ html, body {
   width: 100%;
 }
 
-/* line 25, ../sass/global.scss */
+/* line 27, ../sass/global.scss */
 body {
   display: flex;
   justify-content: center;

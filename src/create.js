@@ -47,12 +47,16 @@ creates.forEach(create =>{
 		
 
 		/* Event listener */
-		// click event
-		newElement.addEventListener('click',e =>{
+		
+		// on context menu event(right click)
+		newElement.addEventListener('contextmenu',e =>{
+			e.preventDefault();
 			globalEdit(e.target, e.target.getAttribute('id'));
 		},true)
+
 		// Double click event
 		newElement.addEventListener('dblclick', e =>{
+			e.preventDefault();
 			e.target.setAttribute('contenteditable',true);
 			e.target.style.boxShadow="0 0 2px 2px #000";
 			e.target.focus(); // autofocus
